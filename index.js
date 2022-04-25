@@ -3,8 +3,15 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
+const generatePage = require('./src/generatePage');
 
 let teamList = [];
+
+const buildPage = () => {
+    fs.writeFile('./dist/index.html', generatePage(teamList), (error) =>
+        error ? console.log(error) : console.log('Team profile was generated successfully!')
+    );
+};
 
 const addManager = () => {
     return inquirer.prompt([
