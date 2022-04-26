@@ -27,7 +27,7 @@ This project is meant to generate an webpage filled with basic team member infor
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## installation
+## Installation
 <ol><li>Fork the repo</li><li>Run <code class="language-bash">npm install</code></li><li>Run <code class="language-bash">node index</code></li></ol>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
