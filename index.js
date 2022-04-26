@@ -7,7 +7,7 @@ const generatePage = require('./src/generatePage');
 
 let teamList = [];
 
-const buildPage = () => {
+const buildTeamPage = () => {
     fs.writeFile('./dist/index.html', generatePage(teamList), (error) =>
         error ? console.log(error) : console.log('Team profile was generated successfully!')
     );
@@ -95,10 +95,11 @@ const addEmployee = () => {
 
         teamList.push(employee);
 
+
         if (addTeamMember) {
             return addEmployee();
         } else {
-            return buildPage();
+            return buildTeamPage();
         }
     });
 };
